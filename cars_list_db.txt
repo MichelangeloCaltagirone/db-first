@@ -1,0 +1,22 @@
+# modellizzazione di un ipotetico database
+
+nome tabella:  cars_list
+
+
+id                          BIGINT                  Primary Key        AUTO_INCREMENT
+brand                       VARCHAR(255)            NOTNULL
+type                        VARCHAR(255)            NOTNULL
+model                       VARCHAR(255)            NOTNULL
+production_year             YEAR                    NOTNULL
+fuel                        VARCHAR(255)            NULL    
+km_travelled                FLOAT(8,4)              NOTNULL
+price                       UNSIGNED SMALLINT       NOTNULL
+payable_installments        BOOLEAN                 NULL               DEFAULT(false)
+installments_value          TINYINT                 NULL
+available                   BOOLEAN                 NOTNULL
+transmission                VARCHAR(255)            NULL
+notes                       TEXT                    NULL
+chassis_number              UNSIGNED SMALLINT       NOTNULL            UNIQUE
+last_owner                  VARCHAR(255)            NULL               DEFAULT(private)
+smart_key                   BOOLEAN                 NULL               DEFAULT(false)
+GPS                         BOOLEAN                 NULL
